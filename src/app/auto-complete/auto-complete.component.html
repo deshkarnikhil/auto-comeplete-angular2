@@ -1,0 +1,9 @@
+<md-input-container>
+  <input mdInput placeholder="Auto Complete" [mdAutocomplete]="auto" [formControl]="stateCtrl" style="width:100%">
+</md-input-container>
+
+<md-autocomplete #auto="mdAutocomplete" style="width:100%">
+  <md-option *ngFor="let state of filteredStates | async" [value]="state" style="width:100%">
+    {{ state }}
+  </md-option>
+</md-autocomplete>
